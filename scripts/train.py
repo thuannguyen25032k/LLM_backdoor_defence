@@ -162,6 +162,12 @@ def main():
     training_config_path = "config/training_config.yaml"
     training_args = load_training_config(training_config_path)
 
+    for key, value in train_dataset[0].items():
+        print("-----------------------------------------")
+        print(f"{key}: {value}")
+    import sys
+    sys.exit()
+
     trainer = SFTTrainer(
         model=peft_model,
         args=training_args,

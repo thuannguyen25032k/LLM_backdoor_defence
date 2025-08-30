@@ -4,7 +4,7 @@ model:
   max_length: 2048
 
 training:
-  learning_rate: 2e-4
+  learning_rate: 5e-4
   per_device_train_batch_size: 1
   gradient_accumulation_steps: 1
   gradient_checkpointing: True
@@ -19,8 +19,8 @@ scheduler:
 logging:
   logging_steps: 1
   report_to: "mlflow"
-  run_name: "gpt-oss-20b-multilingual-reasoner"
+  run_name: "gpt-oss-20b-defense"
 
 output:
-  output_dir: "results/gpt-oss-20b-multilingual-reasoner"
+  output_dir: "results/gpt-oss-20b-defense"
   push_to_hub: false
